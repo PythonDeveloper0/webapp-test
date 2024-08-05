@@ -45,7 +45,7 @@ def start(update: Update, context: CallbackContext):
     update.message.reply_text('Hello! Use /connect to connect your wallet.')
 
 def connect(update: Update, context: CallbackContext):
-    update.message.reply_text('Connect your wallet here: http://yourdomain.com/connect')
+    update.message.reply_text('Connect your wallet here: http://web-production-2332.up.railway.app/connect')
 
 # Set up the dispatcher
 dispatcher = Dispatcher(bot, None, workers=0, use_context=True)
@@ -58,4 +58,4 @@ def run_app():
 
 if __name__ == '__main__':
     threading.Thread(target=run_app).start()
-    bot.set_webhook(url='http://yourdomain.com/webhook')
+    bot.set_webhook(url='http://web-production-2332.up.railway.app/webhook')
